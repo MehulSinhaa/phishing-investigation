@@ -1,0 +1,2 @@
+# Keep raw phishing emails out of the public repo
+*.eml
