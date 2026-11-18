@@ -17,7 +17,8 @@ Email header analysis · SPF / DKIM / DMARC · VirusTotal · urlscan.io · Abuse
 ## Cases
 | # | Lure | Verdict | Key finding | Report |
 |---|------|---------|-------------|--------|
-| 1 | Fake "account locked" cloud-storage warning | Malicious | Link on Google Cloud Storage redirects to a hidden second domain; 2/93 and 0/92 on VirusTotal | [report](reports/case-01.md) | 2 | Fake Leroy Merlin "reward" (French) | Malicious | Google-hosted redirector only works with tracking data; sends victims to a bare IP that public reports link to a scam traffic distribution system | [report](reports/case-02.md) |
+| 1 | Fake "account locked" cloud-storage warning | Malicious | Link on Google Cloud Storage redirects to a hidden second domain; 2/93 and 0/92 on VirusTotal | [report](reports/case-01.md) |
+| 2 | Fake Leroy Merlin "reward" (French) | Malicious | Google-hosted redirector only works with tracking data; sends victims to a bare IP that public reports link to a scam traffic distribution system | [report](reports/case-02.md) |
 
 ## Key takeaways
 at the end...
