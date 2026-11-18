@@ -25,3 +25,4 @@ at the end...
 ## Safety
 Samples are stored only as raw .eml files. No link was clicked and no attachment was opened.
 All URLs and domains in reports are defanged (hxxp, example[.]com).
+
