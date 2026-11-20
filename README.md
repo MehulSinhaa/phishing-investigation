@@ -23,7 +23,11 @@ Email header analysis · SPF / DKIM / DMARC · VirusTotal · urlscan.io · Abuse
 | 4 | Fake UnitedHealthcare "free dental kit" | Malicious | Sent from the same server as case 03 on the same day; new Return-Path domain registered in April 2026 with an SPF rule allowing any OVH server | [report](reports/case-04.md) |
 
 ## Key takeaways
-at the end...
+- **Reputation scores alone would have missed most of these emails.** The links scored 0 to 2 out of 93 on VirusTotal. The scam only became clear from the headers, the page code and comparing cases.
+- **SPF "pass" proves very little on its own.** In every case it passed for a hidden Return-Path domain, never for the sender shown to the reader. In cases 03 and 04 it passed because the domains' SPF records allow any OVH server, including rented ones.
+- **Trusted services were used to hide the real destination.** Google Cloud Storage pages and a TinyURL link redirected victims to throwaway domains or bare IP addresses; reading the page source with `curl` revealed where they led.
+- **Correlating alerts revealed a campaign.** Cases 01, 03 and 04 share the same servers, redirector and sender patterns while rotating brands (cloud storage, Netflix, UnitedHealthcare) and Return-Path domains. Blocking the shared infrastructure is more effective than blocking each domain.
+- **Tracking data hides in unexpected places:** a Base64 token after `#` in the link, a number appended to the Date header, and the recipient's own address encoded inside the Message-Id.
 
 ## Safety
 Samples are stored only as raw .eml files. No link was clicked and no attachment was opened.
