@@ -20,6 +20,7 @@ Email header analysis · SPF / DKIM / DMARC · VirusTotal · urlscan.io · Abuse
 | 1 | Fake "account locked" cloud-storage warning | Malicious | Link on Google Cloud Storage redirects to a hidden second domain; 2/93 and 0/92 on VirusTotal | [report](reports/case-01.md) |
 | 2 | Fake Leroy Merlin "reward" (French) | Malicious | Google-hosted redirector only works with tracking data; sends victims to a bare IP that public reports link to a scam traffic distribution system | [report](reports/case-02.md) |
 | 3 | Fake Netflix "payment declined" | Malicious | Same campaign and redirector as case 01; SPF passed because a real company's SPF record allows any OVH server; TinyURL hides a bare IP | [report](reports/case-03.md) |
+| 4 | Fake UnitedHealthcare "free dental kit" | Malicious | Sent from the same server as case 03 on the same day; new Return-Path domain registered in April 2026 with an SPF rule allowing any OVH server | [report](reports/case-04.md) |
 
 ## Key takeaways
 at the end...
